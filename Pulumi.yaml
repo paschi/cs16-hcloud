@@ -1,0 +1,20 @@
+name: cs16-hcloud
+runtime: nodejs
+description: Counter-Strike 1.6 server on Hetzner Cloud
+config:
+  server:
+    value:
+      type: cx21
+      location: fsn1
+  docker:
+    value:
+      image: ghcr.io/paschi/cs16-docker:main
+      ports:
+        - port: 26900
+          protocol: udp
+        - port: 27015
+          protocol: tcp
+        - port: 27015
+          protocol: udp
+        - port: 27020
+          protocol: udp

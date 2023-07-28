@@ -1,0 +1,9 @@
+config:
+  cs16-hcloud:game:
+    admin:
+      secure: AAABALfjvaKywgtMfB0gQNMN3dVxGRHTdzvnaolPvz0rIi1bsv9XpwU=
+    password:
+      secure: AAABAIbZrEvcmDhCZS/ljiEXerrBqrJEiAQ8yScHzuH9Qw9zM/oK//vtYLs=
+  cs16-hcloud:server:
+    location: fsn1
+    type: cx11
