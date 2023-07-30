@@ -28,10 +28,22 @@ jobs:
 
       - name: Deploy ${{ inputs.environment }} stack
         uses: pulumi/actions@v4
-        id: pulumi
+        id: deployment
         with:
           command: up
           stack-name: ${{ inputs.environment }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+
+      - name: Send Discord notification 
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            **Counter-Strike 1.6** server is **up & running**. :gun:
+            To connect, paste this line into the in-game console:
+            ```
+            connect ${{ steps.deployment.outputs.ip }};password ${{ steps.deployment.outputs.password }}
+            ```
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}

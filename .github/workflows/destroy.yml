@@ -28,9 +28,18 @@ jobs:
 
       - name: Destroy ${{ inputs.environment }} stack
         uses: pulumi/actions@v4
+        id: deployment
         with:
           command: destroy
           stack-name: ${{ inputs.environment }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
           HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+
+      - name: Send Discord notification
+        uses: Ilshidur/action-discord@master
+        with:
+          args: |
+            **Counter-Strike 1.6** server has been **shut down**. :broken_heart:
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
