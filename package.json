@@ -2,7 +2,7 @@
     "name": "cs16-hcloud",
     "main": "index.ts",
     "devDependencies": {
-        "@types/node": "^16",
+        "@types/node": "^20",
         "@typescript-eslint/eslint-plugin": "^6.2.0",
         "@typescript-eslint/parser": "^6.2.0",
         "eslint": "^8.46.0",
@@ -10,7 +10,6 @@
     },
     "dependencies": {
         "@pulumi/command": "^0.8.0",
-        "@pulumi/docker": "^3.6.1",
         "@pulumi/hcloud": "^1.14.0",
         "@pulumi/pulumi": "^3.0.0",
         "@pulumi/tls": "^4.10.0"
