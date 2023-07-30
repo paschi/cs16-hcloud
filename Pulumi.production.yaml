@@ -1,12 +1,12 @@
 config:
   cs16-hcloud:game:
     admin:
-      secure: AAABANbHmRb596LuxNG7xES/fmQjC/KOZIwTrL0D8YIKzEjf9xnT5d0=
+      secure: AAABAGpKs80Aavh0oZLP+0jQtjTPonz8iHH+l8pEgTn48XBFpgHj5tc=
     map: de_dust
     maxPlayers: 16
     name: Spezi Zockertreff
     password:
-      secure: AAABADXycBr9dFZSpAgn/dt2kaJ0zevClSKZmMGisCrdKS8mzSgU2jsQFw==
+      secure: AAABAMDhOTCGqa6zAjSyxb97yeJX0ldLdAg/NVZQAmXbHOhdvWsps3PL8g==
   cs16-hcloud:server:
     location: fsn1
     type: cx21
