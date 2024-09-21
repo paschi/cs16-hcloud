@@ -9,4 +9,4 @@ config:
       secure: AAABAMDhOTCGqa6zAjSyxb97yeJX0ldLdAg/NVZQAmXbHOhdvWsps3PL8g==
   cs16-hcloud:server:
     location: fsn1
-    type: cx21
+    type: cx22
